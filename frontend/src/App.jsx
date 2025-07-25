@@ -6,6 +6,9 @@ import Login from './pages/Login'
 import Signup from './pages/Signup'
 import Start from './pages/Start'
 import ForgotPassword from './pages/ForgotPassword'
+import Main from './components/Main'
+import Profile from './pages/Profile'
+import Appointments from './pages/Appointments'
 const App = () => {
   return (
     <div>
@@ -16,6 +19,9 @@ const App = () => {
         <Route path='/login' element={<Login />}/>
         <Route path='/signup' element={<Signup />}/>
         <Route path='/forgot-password' element={<ForgotPassword />} />
+        <Route path='/dashboard' element={<Main />} />
+        <Route path='/profile' element={<Profile />} />
+        <Route path='/appointments' element={<Appointments />} />
       </Routes>
     </div>
   )
