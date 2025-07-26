@@ -1,6 +1,8 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Start = () => {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-blue-50 to-white">
       {/* Header */}
@@ -23,10 +25,10 @@ const Start = () => {
         {/* Buttons Section */}
         <div className="md:w-1/2 w-full flex flex-col justify-center items-center space-y-6">
           <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">Get Started</h2>
-          <button className="bg-white text-black px-6 py-3 rounded-full text-lg shadow hover:bg-blue-700 hover:text-white transition cursor-pointer">
+          <button onClick={() => navigate('/signup')} className="bg-white text-black px-6 py-3 rounded-full text-lg shadow hover:bg-blue-700 hover:text-white transition cursor-pointer">
             Signup
           </button>
-          <button className="bg-white text-black px-6 py-3 rounded-full text-lg shadow hover:bg-blue-700 hover:text-white transition cursor-pointer">
+          <button onClick={() => navigate('/login')} className="bg-white text-black px-6 py-3 rounded-full text-lg shadow hover:bg-blue-700 hover:text-white transition cursor-pointer">
             Login
           </button>
         </div>
